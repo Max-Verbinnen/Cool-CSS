@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Source+Sans+Pro:200,400');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Playfair Display', serif;
+  scroll-behavior: smooth;
+}
+a {
+  background-color: goldenrod;
+  text-decoration: none;
+  color: white;
+  border-radius: .25rem;
+  text-align: center;
+  display: inline-block;
+  transition: all .3s;
+}
+a:hover {
+  opacity: .6;
+}
+.hero {
+  background-image: url('https://images.unsplash.com/photo-1518176258769-f227c798150e');
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  padding: 4rem 2rem;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+.hero * {
+  color: white;
+}
+.hero h1 {
+  font-size: 4em;
+  padding-bottom: 1em;
+  vertical-align: center;
+}
+.hero .content p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+.hero .content a {
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.breweries {
+  padding: 2rem;
+}
+@media (max-width: 360px) {
+  .breweries {
+    padding: 1rem;
+  }
+  .breweries ul li {
+    display: block;
+  }
+}
+.breweries ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 1em;
+}
+.breweries ul li {
+  border: 2px solid #E2E2E2;
+  border-radius: 0.5em;
+  list-style: none;
+}
+.breweries ul li:hover {
+  border: 2px solid goldenrod;
+  transition: 0.5s;
+}
+.breweries ul li figure {
+  max-height: 220px;
+  overflow: hidden;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
+  position: relative;
+}
+.breweries ul li figure img {
+  width: 100%;
+}
+.breweries ul li figure figcaption {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+}
+.breweries ul li figure figcaption h3 {
+  color: white;
+  padding: 0.5em;
+  font-size: 1.3em;
+}
+.breweries ul li p {
+  font-size: 1rem;
+  line-height: 1.5;
+  padding: 1rem .75rem;
+  color: #666666;
+}
+.breweries ul li a {
+  padding: .5rem 1rem;
+  margin: .5rem;
+  position: relative;
+  bottom: 0;
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Magic Nav Indicator</title>
+</head>
+<body>
+  <nav>
+    <div id="marker"></div>
+    <a href="index.html">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Team</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <script>
+    const marker = document.querySelector('#marker');
+    const items = document.querySelectorAll('a');
+
+    function indicator(e) {
+      marker.style.left = e.target.offsetLeft + 'px';
+      marker.style.width = e.target.offsetWidth + 'px';
+    }
+
+    items.forEach(item => {
+      item.addEventListener('click', (e) => {
+        indicator(e);
+        e.preventDefault();
+      })
+    })
+  </script>
+</body>
+</html>

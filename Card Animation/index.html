@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Card Animation</title>
+</head>
+<body>
+  <svg width="244" height="332" viewBox="0 0 244 332" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect class="card-full" width="244" height="332" rx="3" fill="#404040"/>
+    <path class="card-top" d="M0 3C0 1.34315 1.34315 0 3 0H241C242.657 0 244 1.34315 244 3V103H0V3Z" fill="#707070"/>
+    <path class="icon" d="M141.917 34H101.083C98.8293 34.0027 97.0027 35.8293 97 38.0833V64.2167C97.0027 66.4707 98.8293 68.2973 101.083 68.3H141.917C142.146 68.3009 142.375 68.2809 142.6 68.2404C144.565 67.9115 146.004 66.209 146 64.2167V38.0833C145.997 35.8292 144.171 34.0027 141.917 34ZM101.083 66.6667C100.442 66.6666 99.8546 66.4191 99.4157 66.0112C98.6049 65.2578 99.2216 64.0541 100.148 63.4484L113.133 54.9584C114.206 54.2572 115.605 54.3146 116.617 55.1014L124.584 61.2987C126.838 63.0525 125.598 66.6667 122.742 66.6667H101.083ZM144.367 64.2167C144.368 65.4153 143.5 66.4381 142.317 66.6316C142.185 66.6553 142.051 66.6671 141.917 66.6667H135.174C134.507 66.6667 133.858 66.4441 133.332 66.0342L126.326 60.5816C124.795 59.3906 124.78 57.0822 126.294 55.8711L131.372 51.8113C132.351 51.0284 133.714 50.9369 134.789 51.5819L142.91 56.455C143.814 56.9972 144.367 57.9737 144.367 59.0275V64.2167ZM144.367 50.1259C144.367 52.4577 141.823 53.8981 139.823 52.6983L133.354 48.8168C133.061 48.6407 132.69 48.6655 132.423 48.8789L123.844 55.7393C122.761 56.6059 121.224 56.6163 120.129 55.7645L115.467 52.139C115.192 51.9252 114.812 51.9094 114.52 52.0998L103.275 59.4521C101.28 60.7567 98.6333 59.3251 98.6333 56.9411V38.0833C98.6333 36.7302 99.7302 35.6333 101.083 35.6333H141.917C143.27 35.6333 144.367 36.7302 144.367 38.0833V50.1259Z" fill="#404040"/>
+    <path d="M121.5 38.9C118.794 38.9 116.6 41.0938 116.6 43.8C116.603 46.5051 118.795 48.6973 121.5 48.7C124.206 48.7 126.4 46.5062 126.4 43.8C126.4 41.0938 124.206 38.9 121.5 38.9ZM121.5 47.0667C119.696 47.0667 118.233 45.6041 118.233 43.8C118.233 41.9959 119.696 40.5333 121.5 40.5333C123.304 40.5333 124.767 41.9959 124.767 43.8C124.767 45.6041 123.304 47.0667 121.5 47.0667Z" fill="#404040"/>
+    <rect class="blip-1" x="28" y="127" width="84" height="16" rx="7" fill="#707070"/>
+    <rect class="blip-4" x="131" y="246" width="48" height="16" rx="7" fill="#707070"/>
+    <rect class="blip-5" x="198" y="246" width="20" height="16" rx="7" fill="#BEBEBE"/>
+    <rect class="blip-2" x="28" y="166" width="118" height="16" rx="7" fill="#707070"/>
+    <rect class="blip-3" x="28" y="246" width="84" height="16" rx="7" fill="#516BC4"/>
+    </svg>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+
+    <script>
+      const tl = gsap.timeline({defaults: {duration: 0.7, ease: Back.easeOut.config(2), opacity: 0}});
+      const tl2 = gsap.timeline({defaults: {duration: 1.5, delay: 1}});
+
+      tl.from('svg', {delay: 1, scale: 0.2, transformOrigin: 'center'}, '=.2')
+        .from('.card-top', {scaleY: 0, transformOrigin: 'top'})
+        .from('.icon', {scale: 0.2, transformOrigin: 'center'}, "-=.7")
+        .from('.blip-1', {scaleX: 0})
+        .from('.blip-2', {scaleX: 0}, "-=.2")
+        .from('.blip-3', {scaleX: 0}, "-=.3")
+        .from('.blip-4', {scaleX: 0}, "-=.5")
+        .from('.blip-5', {scaleX: 0}, "-=.7");
+
+      tl2.to('svg', {y: 10, repeat: -1, yoyo: true});
+    </script>
+</body>
+</html>

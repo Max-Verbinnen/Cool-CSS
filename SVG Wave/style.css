@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Montserrat&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+.wave {
+  background: linear-gradient(90deg, #d1325a 0%, #e75d31 50%, #f87915 100%);
+  min-height: 100vh;
+}
+.wave svg {
+  display: block;
+}
+.wave .content {
+  margin: 2rem 4rem 2rem 4rem;
+  overflow: auto;
+}
+.wave .content h1 {
+  font-size: 7rem;
+  color: #fff;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 4rem;
+  font-family: 'Chelsea Market', cursive;
+  overflow-x: hidden;
+}
+.wave .content p {
+  display: block;
+  font-size: 2rem;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  margin-bottom: 5rem;
+  padding-bottom: 2rem;
+  width: 100%;
+}
+.wave .content img {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+@media (max-width: 500px) {
+  .wave .content h1 {
+    font-size: 4rem;
+  }
+  .wave .content p {
+    font-size: 1.7rem;
+    padding-bottom: 0;
+  }
+}

@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glegoo&family=Nothing+You+Could+Do&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+section {
+  padding: 5rem 0;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  max-width: 135rem;
+}
+nav {
+  width: 100%;
+  height: 6rem;
+  background-color: white;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+  position: sticky;
+}
+.navigation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  z-index: 1000;
+}
+.logo-link {
+  font-size: 4rem;
+  font-family: 'Caveat', sans-serif;
+  margin-bottom: 0.55rem;
+  text-decoration: none;
+  color: #222;
+  transition: all 0.9s cubic-bezier(.92,.43,.82,.83);
+}
+.logo-link:hover {
+  background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-position: 21.21rem;
+}
+.navigation .icons {
+  position: relative;
+  z-index: 1500;
+}
+.navigation .hamburger {
+  cursor: pointer;
+}
+.navigation .cross {
+  display: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1300;
+}
+.nav-list {
+  font-family: 'Patrick Hand', sans-serif;
+  opacity: 0;
+  transform: scale(0);
+  list-style: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /*background-color: #A877F9;*/
+  background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+  transition: opacity 0.7s ease;
+  z-index: 1200;
+}
+.navigation.active .nav-list {
+  opacity: 1;
+  transform: scale(1);
+  position: absolute;
+  z-index: 1200;
+}
+.navigation.active .hamburger {
+  display: none;
+}
+.navigation.active .cross {
+  display: block;
+  position: relative;
+  z-index: 1500;
+}
+.navigation.active .hero {
+  position: relative;
+  z-index: -100;
+}
+.nav-item {
+  font-family: 'Patrick Hand', sans-serif;
+  padding: 1rem;
+  margin: 1.75rem 0;
+  position: relative;
+  z-index: 1250;
+}
+.nav-link {
+  text-decoration: none;
+  color: #fafafa;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-family: 'Patrick Hand', sans-serif;
+}
+.hero {
+  width: 100%;
+  height: 70vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(127, 127, 213, 0.7) 0%, rgba(134, 168, 231, 0.7) 50%, rgba(145, 234, 228, 0.7) 100%), url("hero.jpg") center no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -100;
+}
+.hero .container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.hero-titles {
+  color: #fafafa;
+}
+.hero-titles h1 {
+  font-family: 'Nothing You Could Do', sans-serif;
+  font-size: 8rem;
+}
+.hero-titles h3 {
+  font-family: 'Glegoo', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.btns a {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  background: initial;
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+.btns a:first-child {
+  margin-right: 1rem;
+  /*background: #3E4B99;*/
+  background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+  transition: all ease 0.5s;
+  border: 2px solid white;
+}
+.btns a:first-child:hover {
+  /*background: #5865B1;*/
+  background: linear-gradient(to left, #7F7FD5, #86A8E7, #91EAE4);
+}
+.btns a:nth-child(2) {
+  /*background: #5865B1;*/
+  transition: all ease 0.5s;
+  background: linear-gradient(to left, #7F7FD5, #86A8E7, #91EAE4);
+  border: 2px solid white;
+}
+.btns a:nth-child(2):hover {
+  /*background: #3E4B99;*/
+  background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+}
+
+@media screen and (min-width: 700px) {
+  nav {
+    height: 8rem;
+  }
+  .navigation {
+    padding: 0 6rem;
+  }
+  .nav-list {
+    width: initial;
+    height: initial;
+    background-color: transparent;
+    position: initial;
+    top: initial;
+    right: initial;
+    flex-direction: row;
+    transition: initial;
+    z-index: 1200;
+    opacity: initial;
+    transform: scale(1);
+    background: initial;
+  }
+  .nav-link {
+    color: #222;
+    font-size: 2.25rem;
+    position: relative;
+    text-transform: lowercase;
+  }
+  .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    border-radius: 8px;
+    height: 2px;
+    background: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+    transform: scaleX(0);
+    transition: transform 0.3s cubic-bezier(.92,.43,.82,.83);
+    transform-origin: left;
+  }
+  .nav-link:hover::before {
+    transform: scaleX(1);
+  }
+  .icons {
+    display: none;
+  }
+  .hero {
+    z-index: 100;
+  }
+}
+@media (max-width: 450px) {
+  .hero-titles h1 {
+    font-size: 6rem;
+  }
+  .hero-titles h3 {
+    font-size: 2.25rem;
+  }
+  .btn.hero {
+    font-size: 1.35rem;
+  }
+}

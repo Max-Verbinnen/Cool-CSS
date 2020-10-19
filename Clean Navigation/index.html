@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Clean Navigation</title>
+  </head>
+  <body>
+    <nav>
+      <div class="container">
+        <div class="navigation">
+          <a class="logo-link" href="#">Max Verbinnen</a>
+          <div class="icons">
+            <svg viewBox="0 0 100 80" width="20" height="20" class="hamburger">
+              <rect width="80" height="10" rx="10"></rect>
+              <rect y="30" width="90" height="10" rx="10"></rect>
+              <rect y="60" width="100" height="10" rx="10"></rect>
+            </svg>
+            <svg viewBox="0 0 100 80" width="20" height="20" class="cross">
+              <line x1="0" y1="0" x2="80" y2="80" stroke="red" stroke-width="10" />
+              <line x1="80" y1="0" x2="0" y2="80" stroke="red" stroke-width="10" />
+            </svg>
+          </div>
+          <ul class="nav-list">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Ervaring</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Werkwijze</a></li>
+            <!--<li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>-->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="hero">
+        <div class="container">
+          <div class="hero-titles">
+            <h1>Max Verbinnen</h1>
+            <h3>Web Developer</h3>
+          </div>
+          <div class="btns">
+            <a href="#teset" class="btn hero">Ervaring</a>
+            <a href="#teset" class="btn hero">Werkwijze</a>
+          </div>
+          </div>
+      </div>
+
+    </main>
+
+    <script type="text/javascript">
+    const selectElement = (s) => document.querySelector(s);
+    selectElement('.hamburger').addEventListener('click', () =>  {
+      selectElement('.navigation').classList.add('active');
+    })
+    selectElement('.cross').addEventListener('click', () =>  {
+    selectElement('.navigation').classList.remove('active');
+    })
+    </script>
+  </body>
+</html>

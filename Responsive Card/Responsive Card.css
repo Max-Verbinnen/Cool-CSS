@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: #16384c;
+}
+nav {
+  font-family: consolas;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.topnav {
+  position: relative;
+  margin-top: 20px;
+
+}
+.topnav .icon {
+  display: none;
+}
+@media screen and (max-width: 900px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: fixed;
+    align-items: left;
+    top: 10px;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: flex;
+    text-align: left;
+  }
+}
+.topnav li {
+  list-style: none;
+  margin: 0 20px;
+  display: inline;
+  font-size: 2em;
+}
+.topnav li span {
+  position: relative;
+  top: 2px;
+  left: -10px;
+  color: transparent;
+}
+.topnav li:hover span {
+  color: #ef0448;
+}
+.topnav li a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  font-weight: 700;
+}
+.topnav li a:before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  overflow-y: hidden;
+  color: #1bfaad;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.topnav:hover li a:before {
+  animation: animate 0.5s steps(10) forwards;
+}
+@keyframes animate {
+  0% {
+    width: 200px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+.topnav li:hover a:before {
+  animation: animateTwo 2s steps(10) forwards;
+}
+@keyframes animateTwo {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #16384c;
+}
+.title {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  color: #fff;
+  font-size: 2em;
+}
+.container {
+  position: relative;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+.container .card {
+  position: relative;
+  max-width: 300px;
+  height: 215px;
+  background: #fff;
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+}
+.container .card:hover {
+  height: 380px;
+}
+.container .card .imgBx {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top: -60px;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.container .card .imgBx img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+.container .card .content {
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.container .card:hover .content {
+  visibility: visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+.paragraph {
+  max-width: 1000px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #14ffe9, #ffeb3b, #ff00e0);
+  border-radius: 10px;
+}
+@media screen and (max-width: 900px) {
+  .paragraph {
+    text-align: center;
+    max-width: 700px;
+  }
+}
+@media screen and (max-width: 350px) {
+  * {
+    text-align: center;
+  }
+  .paragraph {
+    text-align: center;
+    max-width: 280px;
+  }
+  .container .card {
+    position: relative;
+    max-width: 200px;
+    height: 190px;
+    background: #fff;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+  }
+  .container .card .imgBx {
+    position: relative;
+    width: 180px;
+    height: 240px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+  .container .card .imgBx img {
+    max-width: 95%;
+    border-radius: 4px;
+    display: flex;
+    align-items: left;
+  }
+}

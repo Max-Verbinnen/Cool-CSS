@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+
+h1 {
+  margin-bottom: 1rem;
+}
+body {
+  min-height: 100vh;
+  padding: 2rem;
+  font-size: 0.8rem;
+}
+ul {
+  margin-left: 2rem;
+}
+details {
+  margin-bottom: 1rem;
+}
+summary {
+  padding: 0.7rem;
+  background: rgb(255, 224, 52);
+  cursor: pointer;
+  outline: none;
+  border-radius: .3rem;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+summary:hover {
+  background: rgb(255, 228, 73);
+}
+summary::-webkit-details-marker {
+  background: url('down.svg') center no-repeat;
+  color: transparent;
+  width: 16px;
+  height: 16px;
+}
+img {
+  width: 100%;
+  margin-top: 1rem;
+}
+.content {
+  padding: 1rem 0;
+}
+details[open] summary ~ * {
+  animation: sweep 0.5s ease-in-out;
+}
+details[open] summary::-webkit-details-marker {
+  background: url('up.svg') center no-repeat;
+  color: transparent;
+  width: 16px;
+  height: 16px;
+}
+@keyframes sweep {
+  from {
+    opacity: 0;
+    margin-top: -10px;
+  }
+  to {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

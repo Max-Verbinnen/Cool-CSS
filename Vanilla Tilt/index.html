@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Vanilla Tilt.js</title>
+</head>
+<body>
+  <div class="elem">
+    <h2 class="title">Element</h2>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    VanillaTilt.init(document.querySelector('.elem'), {
+      max: 12,
+      scale: 1.01,
+      glare: true,
+      'max-glare': 0.3,
+      reset: false,
+      'full-page-listening': true
+    })
+  </script>
+</body>
+</html>

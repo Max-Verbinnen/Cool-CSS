@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.wrapper {
+  display: flex;
+}
+.card {
+  width: 300px;
+  height: 150px;
+  border-radius: 2rem;
+  perspective: 3000;
+  transition: 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+  backface-visibility: hidden;
+}
+.wrapper:hover .one {
+  transform: translate(-30px, 0) rotateX(10deg) rotateY(-50deg);
+}
+.wrapper:hover .two {
+  transform: translate(-80px, -10px) rotateX(10deg) rotateY(-45deg);
+}
+.wrapper:hover .three {
+  transform: translate(-130px, -20px) rotateX(10deg) rotateY(-45deg);
+}
+.wrapper:hover .four {
+  transform: translate(-130px, -30px) rotateX(10deg) rotateY(-45deg);
+}
+
+
+.wrapper:hover .one:hover {
+  transform: translate(-30px, -30px) rotateX(10deg) rotateY(-50deg);
+}
+.wrapper:hover .two:hover {
+  transform: translate(-80px, -40px) rotateX(10deg) rotateY(-45deg);
+}
+.wrapper:hover .three:hover {
+  transform: translate(-130px, -50px) rotateX(10deg) rotateY(-45deg);
+}
+.wrapper:hover .four:hover {
+  transform: translate(-130px, -60px) rotateX(10deg) rotateY(-45deg);
+}
+.one {
+  background: rgb(165, 165, 212);
+  position: relative;
+  z-index: 10;
+}
+.two {
+  background: rgb(204, 166, 135);
+  margin-top: 1rem;
+  position: relative;
+  z-index: 8;
+  margin-left: -9rem;
+}
+.three {
+  background: rgb(187, 138, 176);
+  margin-top: 2rem;
+  position: relative;
+  z-index: 6;
+  margin-left: -9rem;
+}
+.four {
+  background: rgb(131, 202, 134);
+  margin-top: 3rem;
+  position: relative;
+  z-index: 4;
+  margin-left: -15rem;
+}

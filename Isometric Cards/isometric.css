@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f3f3f3;
+}
+.container {
+  position: relative;
+  /*width: 1050px;*/
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  transform: skewY(-5deg);
+}
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem;
+  }
+}
+.container .card {
+  position: relative;
+  transition: 0.5s;
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  margin: 3rem;
+}
+@media (max-width: 400px) {
+  .container .card {
+    width: 250px;
+    height: 360px;
+  }
+}
+.container .card:before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: 0;
+  width: 100%;
+  height: 15px;
+  background: #00c0f6;
+  transform-origin: bottom;
+  transform: skewX(45deg);
+  transition: 0.5s;
+}
+.container .card:after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  width: 15px;
+  height: 50%;
+  background: #00c0f6;
+  transform-origin: left;
+  transform: skewY(45deg);
+  transition: 0.5s;
+  border-bottom: 200px solid #d9d9d9;
+}
+@media (max-width: 400px) {
+  .container .card::after {
+    border-bottom: 180px solid #d9d9d9;
+  }
+}
+.container .card:hover {
+  transform: translateY(-40px);
+}
+.container .card .imgBx {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background: #00c7ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 400px) {
+  .container .card .imgBx {
+    width: 250px;
+    height: 180px;
+  }
+}
+.container .card .imgBx img {
+  max-width: 100px;
+}
+.container .card .imgBx h3 {
+  color: #fff;
+  margin-top: 10px;
+}
+.container .card .content {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding: 20px;
+  color: #777;
+  text-align: center;
+}

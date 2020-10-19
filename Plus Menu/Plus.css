@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  min-height: 100vh;
+  /*background: linear-gradient(#7d6cfc, #c635ea);*/
+  background: #fff;
+}
+.action {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(#7d6cfc, #c635ea);
+  border-radius: 50%;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.container {
+  position: relative;
+  width: 1100px;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .block {
+  display: flex;
+  position: relative;
+  width: 500px;
+  height: 200px;
+  margin-bottom: 50px;
+}
+.container .block .icon {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin-right: 35px;
+}
+.container .block .icon path {
+  stroke-width: 9px;
+  stroke: #7d6cfc;
+}
+.container .block .content {
+  line-height: 30px;
+}
+@media (max-width: 991px) {
+  .container {
+    position: relative;
+    width: 500px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.action span {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 2em;
+  transition: 0.3s ease-in-out;
+}
+.action.active span {
+  transform: rotate(135deg);
+}
+.action ul {
+  position: absolute;
+  bottom: 70px;
+  background: linear-gradient(#7d6cfc, #c635ea);
+  list-style: none;
+  width: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.7s;
+}
+.action.active ul {
+  visibility: visible;
+  opacity: 1;
+  transition: 0.7s;
+}
+.action ul li {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+  transition: 0.7s;
+}
+.action ul li:hover {
+  font-weight: 600;
+  transition: 0s;
+}
+.action ul li:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.action ul li .fab {
+  max-width: 5px;
+  margin-right: 30px;
+  color: rgba(0, 0, 0, 0.4);
+}
+.action ul li:hover .fab {
+  color: rgba(0, 0, 0, 1);
+}

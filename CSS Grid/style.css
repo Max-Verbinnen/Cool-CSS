@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+}
+.grid {
+  display: grid;
+  min-height: 100vh;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  text-align: center;
+}
+.box1 {
+  background-color: wheat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box2 {
+  background-color: powderblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box3 {
+  background-color: springgreen;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box4 {
+  background-color: thistle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  max-width: 50%;
+}
+.content h2 {
+  font-size: 3rem;
+}
+.content p {
+  font-size: 1.3rem;
+}
+.content a {
+  text-decoration: none;
+  font-size: 1.3 rem;
+  color: black;
+  padding: 10px;
+  background-color: white;
+  outline: 0.5px solid black;
+}
+.box1 .content a:hover {
+  background-color: wheat;
+  text-decoration: underline;
+}
+.box2 .content a:hover {
+  background-color: powderblue;
+}
+.box3 .content a:hover {
+  background-color: springgreen;
+}
+.box4 .content a:hover {
+  background-color: thistle;
+}
