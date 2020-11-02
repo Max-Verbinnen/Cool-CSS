@@ -1,0 +1,8 @@
+$primary-color: #f4f4f4;
+
+@mixin flex($property) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $property;
+}

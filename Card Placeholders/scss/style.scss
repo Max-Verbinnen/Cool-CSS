@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import 'config';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Itim', sans-serif;
+}
+body {
+  min-height: 100vh;
+  @include flex(row);
+}
+.container {
+  @include flex(row);
+  flex-wrap: wrap;
+  max-width: 1100px;
+
+  .card {
+    @include flex(column);
+    width: 300px;
+    margin: 30px;
+    background: darken($primary-color, 5%);
+    border-radius: 5px;
+
+    .imgBx {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      overflow: hidden;
+      height: 300px;
+      
+      img {
+        transition: 0.5s;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        transform: scale(1.1);
+        
+        &:hover {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .content {
+      padding: 20px;
+
+      h2 {
+        margin: 10px 0;
+        color: #222;
+      }
+      p {
+        color: #444;
+      }
+      a {
+        display: inline-block;
+        padding: 10px 0;
+        text-decoration: none;
+        color: rgb(192, 67, 67);
+        float: right;
+
+        span {
+          display: inline-block;
+        }
+        &:hover span {
+          animation: animate 1s infinite;
+        }
+      }
+    }
+  }
+}
+
+
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
