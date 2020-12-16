@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>Glassmorphism Cards</title>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="content">
+        <h2>01</h2>
+        <h3>Card One</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deserunt, quia dolor ex fuga dolores iste voluptatem libero in consequuntur.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2>02</h2>
+        <h3>Card Two</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deserunt, quia dolor ex fuga dolores iste voluptatem libero in consequuntur.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2>03</h2>
+        <h3>Card Three</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius deserunt, quia dolor ex fuga dolores iste voluptatem libero in consequuntur.</p>
+        <a href="#">Read More</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".card"), {
+      max: 25,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.3
+	  });
+  </script>
+</body>
+</html>
