@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Black Friday</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section>
+    <h2>Black<br><span>Friday</span></h2>
+    <div class="black"></div>
+  </section>
+
+
+  <script>
+    const layer = document.querySelector('.black');
+
+    window.addEventListener('mousemove', e => {
+      const x = e.clientX;
+      layer.style.left = x + 'px';
+    });
+  </script>
+</body>
+</html>
