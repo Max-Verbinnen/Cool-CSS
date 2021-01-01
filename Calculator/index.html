@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glassmorphism Calculator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <form class="calculator" name="calc">
+      <input type="text" readonly class="value" name="txt">
+      <span class="num clear">c</span>
+      <span class="num">/</span>
+      <span class="num">*</span>
+      <span class="num">7</span>
+      <span class="num">8</span>
+      <span class="num">9</span>
+      <span class="num">-</span>
+      <span class="num">4</span>
+      <span class="num">5</span>
+      <span class="num">6</span>
+      <span class="num plus">+</span>
+      <span class="num">1</span>
+      <span class="num">2</span>
+      <span class="num">3</span>
+      <span class="num">0</span>
+      <span class="num">00</span>
+      <span class="num">.</span>
+      <span class="num equal">=</span>
+    </form>
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js" integrity="sha512-SttpKhJqONuBVxbRcuH0wezjuX+BoFoli0yPsnrAADcHsQMW8rkR84ItFHGIkPvhnlRnE2FaifDOUw+EltbuHg==" crossorigin="anonymous"></script>
+  <script>
+    // Set value in calculator
+    let input = document.querySelector(".value");
+    const spans = document.querySelectorAll("span");
+
+    spans.forEach(span => {
+      span.addEventListener('click', () => {
+        if (span.innerText === "c") {
+          input.value = "";
+        } else if (span.innerText === "=") {
+          input.value = +parseFloat(eval(input.value)).toFixed(2);
+        } else {
+          input.value += span.innerText;
+          
+        }
+      })
+    });
+
+    // Vanilla tilt
+    VanillaTilt.init(document.querySelector(".container"), {
+		  max: 5,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.2
+	  });
+  </script>
+</body>
+</html>
