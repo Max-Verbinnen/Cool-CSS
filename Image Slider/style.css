@@ -1,0 +1,46 @@
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+img {
+  width: 30vw;
+  height: 80vh;
+  object-fit: cover;
+}
+
+.container {
+  position: relative;
+  width: 30vw;
+  height: 80vh;
+}
+
+.img-container-after, .img-container-before {
+  position: absolute;
+  width: 30vw;
+  height: 80vh;
+}
+
+.img-container-before {
+  width: 15vw;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 0.35rem;
+  background: #fff;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+}
