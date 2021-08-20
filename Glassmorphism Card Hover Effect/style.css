@@ -8,12 +8,16 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+:root {
+  --blue: #03a9f4;
+}
+
 body {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(#03a9f4, #03a9f4 45%, #fff 45%, #fff 100%);
+  background: linear-gradient(var(--blue), var(--blue) 45%, #fff 45%, #fff 100%);
 }
 
 .card {
@@ -75,7 +79,7 @@ body {
 
 .content .details h2 span {
   font-size: 0.7em;
-  color: #03a9f4;
+  color: var(--blue);
   font-weight: 400;
 }
 
@@ -107,6 +111,6 @@ body {
 }
 
 .sci li a:hover {
-  background: #03a9f4;
+  background: var(--blue);
   color: #fff;
 }
